@@ -1,0 +1,41 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: grid;
+  grid-template:
+    'name' 2em
+    'img' minmax(auto, 200px)
+    'details' minmax(100px, auto) / 250px;
+  margin: 0.5em;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #9b9b9b;
+}
+
+.card-name {
+  margin: 0.5rem;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.card-img {
+  margin: 0.25em 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-details {
+  margin: 0.5em;
+  font-style: italic;
+}

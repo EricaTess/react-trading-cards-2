@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Cards {% endblock %}
+
+{% block body %}
+  <section>
+    <h2>Add New Trading Card</h2>
+
+    <form id="new-card-form">
+      <label for="name-field">Name</label>
+      <input type="text" id="name-field" name="name">
+
+      <label for="skill-field">Skill</label>
+      <input type="text" id="skill-field" name="skill">
+
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Trading Cards</h2>
+
+    <div id="container"></div>
+  </section>
+{% endblock %}
+
+{% block js %}
+  <script src="/static/js/cardsApp.js"></script>
+  <script>
+    // Initialize current card data
+    getAllCards();
+  </script>
+{% endblock %}
